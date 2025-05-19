@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { proto } from '../../WAProto';
 import { KeyPair } from '../Types';
 import { BinaryNode } from '../WABinary';
@@ -10,12 +8,12 @@ export declare const makeNoiseHandler: ({ keyPair: { private: privateKey, public
     logger: ILogger;
     routingInfo?: Buffer | undefined;
 }) => {
-    encrypt: (plaintext: Uint8Array) => Buffer;
-    decrypt: (ciphertext: Uint8Array) => Buffer;
+    encrypt: (plaintext: Uint8Array) => Buffer<ArrayBuffer>;
+    decrypt: (ciphertext: Uint8Array) => Buffer<ArrayBuffer>;
     authenticate: (data: Uint8Array) => void;
     mixIntoKey: (data: Uint8Array) => Promise<void>;
     finishInit: () => Promise<void>;
-    processHandshake: ({ serverHello }: proto.HandshakeMessage, noiseKey: KeyPair) => Promise<Buffer>;
-    encodeFrame: (data: Buffer | Uint8Array) => Buffer;
+    processHandshake: ({ serverHello }: proto.HandshakeMessage, noiseKey: KeyPair) => Promise<Buffer<ArrayBuffer>>;
+    encodeFrame: (data: Buffer | Uint8Array) => Buffer<ArrayBuffer>;
     decodeFrame: (newData: Buffer | Uint8Array, onFrame: (buff: Uint8Array | BinaryNode) => void) => Promise<void>;
 };

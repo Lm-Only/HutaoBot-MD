@@ -6,7 +6,7 @@ import { ILogger } from './logger';
  * @param logger to log trace events
  * @param _cache cache store to use
  */
-export declare function makeCacheableSignalKeyStore(store: SignalKeyStore, logger: ILogger, _cache?: CacheStore): SignalKeyStore;
+export declare function makeCacheableSignalKeyStore(store: SignalKeyStore, logger?: ILogger, _cache?: CacheStore): SignalKeyStore;
 /**
  * Adds DB like transaction capability (https://en.wikipedia.org/wiki/Database_transaction) to the SignalKeyStore,
  * this allows batch read & write operations & improves the performance of the lib
