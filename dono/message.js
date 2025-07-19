@@ -28,6 +28,9 @@ const txt = {
     //Comando sugerido por @Becca
     mess_parceria: "Tudo certo, @#nmr#!\n Você ainda pode divulgar #quantidade#... ✨️",
     
+    //Comando sugerido por @Becca
+    not_parceria: "@#nmr# você não tem parceria com o nosso grupo, contrate algum adm para que você possa divulgar aqui! ❣️",
+    
     LinkGrupoDetect: '0', 
     
     LinkDetect: "0", //Zero para não exibir a mensagem. Mude caso for exibir um texto.
