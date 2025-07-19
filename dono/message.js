@@ -16,6 +16,18 @@ const txt = {
     
     only_group: "🔒 *COMANDO DISPONÍVEL APENAS PARA GRUPOS. 🙇‍♀️*",
     
+    //Comando sugerido por @Becca
+    add_parceria: "*Sucesso*!! Agora @#nmr# poderá enviar links #quantidade#... ✨️",
+    
+    //Comando sugerido por @Becca
+    del_parceria: "*Sucesso*!! Agora @#nmr# não poderá enviar links neste grupo... ✨️",
+    
+    //Comando sugerido por @Becca
+    reached_limit: "@#nmr# seu limite diário de divulgações esgotou, volte no próximo dia para divulgar novamente ou contrate um ADM! 🙇‍♀️",
+    
+    //Comando sugerido por @Becca
+    mess_parceria: "Tudo certo, @#nmr#!\n Você ainda pode divulgar #quantidade#... ✨️",
+    
     LinkGrupoDetect: '0', 
     
     LinkDetect: "0", //Zero para não exibir a mensagem. Mude caso for exibir um texto.
