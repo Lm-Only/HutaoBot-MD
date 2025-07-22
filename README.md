@@ -82,7 +82,7 @@ cd /sdcard/HutaoBot-MD && npm start up
 
 - **Update**: Canal onde será postado updates da HutaoBot-MD. ✨
 
-* [__Canal__](https://whatsapp.com/channel/0029ValLKgUAO7RCUU0dO03k)
+* [__Canal__](https://whatsapp.com/channel/0029VbBDYlKDuMRm551Z5e0s)
 
 ## Features
 
