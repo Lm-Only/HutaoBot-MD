@@ -2,7 +2,7 @@
 
 <h1 align="center">
 <p>
-<img src= "https://i.imgur.com/hMQpm8p.jpeg" alt="HUTAO-BOT V9.0.0✓" width="720">
+<img src= "https://i.postimg.cc/KzTGt74S/IMG-20250725-WA0312.jpg" alt="HUTAO-BOT V9.0.0✓" width="720">
 </p>
 
 <p align="center">
