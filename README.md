@@ -84,12 +84,17 @@ cd /sdcard/HutaoBot-MD && npm start up
 
 * [__Canal__](https://whatsapp.com/channel/0029VbBDYlKDuMRm551Z5e0s)
 
-## Features
+## Sistemas mais avaliados 
 
-- **Desempenho:** Projeto focado em rapidez e baixo consumo de recursos. Com uma source altamente projetada para evitar consumo excessivo de CPU e memória;
-- **Comandos:** HutaoBot-MD contém todos os comando 100% gratuitos e funcionais. Algums podem apresentar falhas, mas iremos corrigir o mais rápido possível;
-- **Uso:** Fácil de usar, e rápida em processo de dados.
-- **Configuração e segurança**: Você pode programar o bot para enviar uma mensagem específica. E também manter a segurança de seu grupo com algums sistemas disponíveis.
+| Sistema          | Função
+| :----------------- | :------------------------- | 
+| Opengp & Closegp            | Abre e Fecha grupos automaticamente
+| Parceria               | Divulgações por limite diário
+| Comandos por figurinhas           | Sem precisar digitar nada
+| Aluguel          | Sistema super otimizado
+| Bem vindo           | Podes definir uma imagem de fundo
+| Auto Baixar           | Baixa vídeos do Instagram e Tiktok automaticamente
+| Anti flood com advertências          | sistema automático de advertências
 
 ## License
 
