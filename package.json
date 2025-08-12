@@ -26,7 +26,7 @@
   "@google/generative-ai": "^0.24.1",
   "@lmonly/scget": "^1.0.4",
   "@vitalets/google-translate-api": "^9.2.1",
-  "@whiskeysockets/baileys": "^6.7.16",
+  "@whiskeysockets/baileys": "git+https://github.com/WhiskeySockets/Baileys.git#v6.7.18",
   "acrcloud": "^1.4.0",
   "assemblyai": "^4.9.0",
   "baileys": "^6.7.17",
@@ -50,5 +50,5 @@
   "qrcode-terminal": "^0.12.0",
   "qs": "^6.14.0"
  },
- "updates": 10
+ "updates": 31
 }
