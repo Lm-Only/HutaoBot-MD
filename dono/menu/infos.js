@@ -94,8 +94,8 @@ return `
 ┃╎ Hii!! @${sender.split('@')[0]} ฅ^•ﻌ•^ฅ
 ┃╎᭪➣ Prefixo: 〘 ${prefixo} 〙
 ┃╎᭪➣ Nome do bot: ${NomeDoBot}
-┃╎᭪➣ Versão do bot: 9.0.0 💎
-┃╎᭪➣ Baileys version: 6.7.16 
+┃╎᭪➣ Versão do bot: 9.5.0 💎
+┃╎᭪➣ Baileys version: 6.7.18
 ┃╎᭪➣ Tema: Hutao / Genshin Impact〘 Game 〙
 ┃╎᭪➣ Dono: ${NickDono}
 ┃╎᭪➣ Numero do dono: ${NumeroDoDono}

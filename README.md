@@ -1,8 +1,8 @@
-<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=2500&color=C60404&center=falso&vCenter=falso&lines=𝑯𝒖𝒕𝒂𝒐𝑩𝒐𝒕-𝑴𝑫+✿+V9.0.0✓;𝐁𝐎𝐓+𝐌𝐔𝐋𝐓𝐈+𝐃𝐄𝐕𝐈𝐂𝐄;✰✰✰✰✰">
+<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=2500&color=C60404&center=falso&vCenter=falso&lines=𝑯𝒖𝒕𝒂𝒐𝑩𝒐𝒕-𝑴𝑫+✿+V9.5.0✓;𝐁𝐎𝐓+𝐌𝐔𝐋𝐓𝐈+𝐃𝐄𝐕𝐈𝐂𝐄;✰✰✰✰✰">
 
 <h1 align="center">
 <p>
-<img src= "https://i.postimg.cc/KzTGt74S/IMG-20250725-WA0312.jpg" alt="HUTAO-BOT V9.0.0✓" width="720">
+<img src= "https://i.postimg.cc/KzTGt74S/IMG-20250725-WA0312.jpg" alt="HUTAO-BOT V9.5.0✓" width="720">
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 
 <p align="center">
 <img title="Autor" src="https://img.shields.io/badge/Autor-LmOnly-orange.svg?style=for-the-badge&logo=github"></a>
-<img title="Versão" src="https://img.shields.io/badge/Versão-9.0.0-orange.svg?style=for-the-badge&logo=github"></a>
+<img title="Versão" src="https://img.shields.io/badge/Versão-9.5.0-orange.svg?style=for-the-badge&logo=github"></a>
 </p>
 
 <div align="center">

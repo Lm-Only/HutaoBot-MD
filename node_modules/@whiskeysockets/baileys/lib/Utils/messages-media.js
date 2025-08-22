@@ -331,27 +331,29 @@ const getHttpStream = async (url, options = {}) => {
 };
 exports.getHttpStream = getHttpStream;
 const encryptedStream = async (media, mediaType, { logger, saveOriginalFileIfRequired, opts } = {}) => {
+    var _a, _b;
     const { stream, type } = await (0, exports.getStream)(media, opts);
     logger === null || logger === void 0 ? void 0 : logger.debug('fetched media stream');
     const mediaKey = Crypto.randomBytes(32);
     const { cipherKey, iv, macKey } = await getMediaKeys(mediaKey, mediaType);
-    const encWriteStream = new stream_1.Readable({ read: () => { } });
-    let bodyPath;
-    let writeStream;
-    let didSaveToTmpPath = false;
-    if (type === 'file') {
-        bodyPath = media.url.toString();
-    }
-    else if (saveOriginalFileIfRequired) {
-        bodyPath = (0, path_1.join)(getTmpFilesDirectory(), mediaType + (0, generics_1.generateMessageIDV2)());
-        writeStream = (0, fs_1.createWriteStream)(bodyPath);
-        didSaveToTmpPath = true;
+    const encFilePath = (0, path_1.join)(getTmpFilesDirectory(), mediaType + (0, generics_1.generateMessageIDV2)() + '-enc');
+    const encFileWriteStream = (0, fs_1.createWriteStream)(encFilePath);
+    let originalFileStream;
+    let originalFilePath;
+    if (saveOriginalFileIfRequired) {
+        originalFilePath = (0, path_1.join)(getTmpFilesDirectory(), mediaType + (0, generics_1.generateMessageIDV2)() + '-original');
+        originalFileStream = (0, fs_1.createWriteStream)(originalFilePath);
     }
     let fileLength = 0;
     const aes = Crypto.createCipheriv('aes-256-cbc', cipherKey, iv);
-    let hmac = Crypto.createHmac('sha256', macKey).update(iv);
-    let sha256Plain = Crypto.createHash('sha256');
-    let sha256Enc = Crypto.createHash('sha256');
+    const hmac = Crypto.createHmac('sha256', macKey).update(iv);
+    const sha256Plain = Crypto.createHash('sha256');
+    const sha256Enc = Crypto.createHash('sha256');
+    const onChunk = (buff) => {
+        sha256Enc.update(buff);
+        hmac.update(buff);
+        encFileWriteStream.write(buff);
+    };
     try {
         for await (const data of stream) {
             fileLength += data.length;
@@ -362,56 +364,53 @@ const encryptedStream = async (media, mediaType, { logger, saveOriginalFileIfReq
                     data: { media, type }
                 });
             }
-            sha256Plain = sha256Plain.update(data);
-            if (writeStream && !writeStream.write(data)) {
-                await (0, events_1.once)(writeStream, 'drain');
+            if (originalFileStream) {
+                if (!originalFileStream.write(data)) {
+                    await (0, events_1.once)(originalFileStream, 'drain');
+                }
             }
+            sha256Plain.update(data);
             onChunk(aes.update(data));
         }
         onChunk(aes.final());
         const mac = hmac.digest().slice(0, 10);
-        sha256Enc = sha256Enc.update(mac);
+        sha256Enc.update(mac);
         const fileSha256 = sha256Plain.digest();
         const fileEncSha256 = sha256Enc.digest();
-        encWriteStream.push(mac);
-        encWriteStream.push(null);
-        writeStream === null || writeStream === void 0 ? void 0 : writeStream.end();
+        encFileWriteStream.write(mac);
+        encFileWriteStream.end();
+        (_a = originalFileStream === null || originalFileStream === void 0 ? void 0 : originalFileStream.end) === null || _a === void 0 ? void 0 : _a.call(originalFileStream);
         stream.destroy();
         logger === null || logger === void 0 ? void 0 : logger.debug('encrypted data successfully');
         return {
             mediaKey,
-            encWriteStream,
-            bodyPath,
+            originalFilePath,
+            encFilePath,
             mac,
             fileEncSha256,
             fileSha256,
-            fileLength,
-            didSaveToTmpPath
+            fileLength
         };
     }
     catch (error) {
         // destroy all streams with error
-        encWriteStream.destroy();
-        writeStream === null || writeStream === void 0 ? void 0 : writeStream.destroy();
+        encFileWriteStream.destroy();
+        (_b = originalFileStream === null || originalFileStream === void 0 ? void 0 : originalFileStream.destroy) === null || _b === void 0 ? void 0 : _b.call(originalFileStream);
         aes.destroy();
         hmac.destroy();
         sha256Plain.destroy();
         sha256Enc.destroy();
         stream.destroy();
-        if (didSaveToTmpPath) {
-            try {
-                await fs_1.promises.unlink(bodyPath);
-            }
-            catch (err) {
-                logger === null || logger === void 0 ? void 0 : logger.error({ err }, 'failed to save to tmp path');
+        try {
+            await fs_1.promises.unlink(encFilePath);
+            if (originalFilePath) {
+                await fs_1.promises.unlink(originalFilePath);
             }
         }
+        catch (err) {
+            logger === null || logger === void 0 ? void 0 : logger.error({ err }, 'failed deleting tmp files');
+        }
         throw error;
-    }
-    function onChunk(buff) {
-        sha256Enc = sha256Enc.update(buff);
-        hmac = hmac.update(buff);
-        encWriteStream.push(buff);
     }
 };
 exports.encryptedStream = encryptedStream;
@@ -532,7 +531,7 @@ function extensionForMediaMessage(message) {
     return extension;
 }
 const getWAUploadToServer = ({ customUploadHosts, fetchAgent, logger, options }, refreshMediaConn) => {
-    return async (stream, { mediaType, fileEncSha256B64, timeoutMs }) => {
+    return async (filePath, { mediaType, fileEncSha256B64, timeoutMs }) => {
         var _a, _b;
         // send a query JSON to obtain the url & auth token to upload our media
         let uploadInfo = await refreshMediaConn(false);
@@ -546,8 +545,9 @@ const getWAUploadToServer = ({ customUploadHosts, fetchAgent, logger, options },
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             let result;
             try {
-                const body = await axios_1.default.post(url, stream, {
+                const body = await axios_1.default.post(url, (0, fs_1.createReadStream)(filePath), {
                     ...options,
+                    maxRedirects: 0,
                     headers: {
                         ...options.headers || {},
                         'Content-Type': 'application/octet-stream',

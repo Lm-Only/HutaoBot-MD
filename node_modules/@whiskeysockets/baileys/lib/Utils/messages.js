@@ -111,7 +111,7 @@ const prepareWAMessageMedia = async (message, options) => {
     const requiresWaveformProcessing = mediaType === 'audio' && uploadData.ptt === true;
     const requiresAudioBackground = options.backgroundColor && mediaType === 'audio' && uploadData.ptt === true;
     const requiresOriginalForSomeProcessing = requiresDurationComputation || requiresThumbnailComputation;
-    const { mediaKey, encWriteStream, bodyPath, fileEncSha256, fileSha256, fileLength, didSaveToTmpPath } = await (0, messages_media_1.encryptedStream)(uploadData.media, options.mediaTypeOverride || mediaType, {
+    const { mediaKey, encFilePath, originalFilePath, fileEncSha256, fileSha256, fileLength } = await (0, messages_media_1.encryptedStream)(uploadData.media, options.mediaTypeOverride || mediaType, {
         logger,
         saveOriginalFileIfRequired: requiresOriginalForSomeProcessing,
         opts: options.options
@@ -120,14 +120,14 @@ const prepareWAMessageMedia = async (message, options) => {
     const fileEncSha256B64 = fileEncSha256.toString('base64');
     const [{ mediaUrl, directPath }] = await Promise.all([
         (async () => {
-            const result = await options.upload(encWriteStream, { fileEncSha256B64, mediaType, timeoutMs: options.mediaUploadTimeoutMs });
+            const result = await options.upload(encFilePath, { fileEncSha256B64, mediaType, timeoutMs: options.mediaUploadTimeoutMs });
             logger === null || logger === void 0 ? void 0 : logger.debug({ mediaType, cacheableKey }, 'uploaded media');
             return result;
         })(),
         (async () => {
             try {
                 if (requiresThumbnailComputation) {
-                    const { thumbnail, originalImageDimensions } = await (0, messages_media_1.generateThumbnail)(bodyPath, mediaType, options);
+                    const { thumbnail, originalImageDimensions } = await (0, messages_media_1.generateThumbnail)(originalFilePath, mediaType, options);
                     uploadData.jpegThumbnail = thumbnail;
                     if (!uploadData.width && originalImageDimensions) {
                         uploadData.width = originalImageDimensions.width;
@@ -137,11 +137,11 @@ const prepareWAMessageMedia = async (message, options) => {
                     logger === null || logger === void 0 ? void 0 : logger.debug('generated thumbnail');
                 }
                 if (requiresDurationComputation) {
-                    uploadData.seconds = await (0, messages_media_1.getAudioDuration)(bodyPath);
+                    uploadData.seconds = await (0, messages_media_1.getAudioDuration)(originalFilePath);
                     logger === null || logger === void 0 ? void 0 : logger.debug('computed audio duration');
                 }
                 if (requiresWaveformProcessing) {
-                    uploadData.waveform = await (0, messages_media_1.getAudioWaveform)(bodyPath, logger);
+                    uploadData.waveform = await (0, messages_media_1.getAudioWaveform)(originalFilePath, logger);
                     logger === null || logger === void 0 ? void 0 : logger.debug('processed waveform');
                 }
                 if (requiresAudioBackground) {
@@ -155,17 +155,15 @@ const prepareWAMessageMedia = async (message, options) => {
         })(),
     ])
         .finally(async () => {
-        encWriteStream.destroy();
-        // remove tmp files
-        if (didSaveToTmpPath && bodyPath) {
-            try {
-                await fs_1.promises.access(bodyPath);
-                await fs_1.promises.unlink(bodyPath);
-                logger === null || logger === void 0 ? void 0 : logger.debug('removed tmp file');
+        try {
+            await fs_1.promises.unlink(encFilePath);
+            if (originalFilePath) {
+                await fs_1.promises.unlink(originalFilePath);
             }
-            catch (error) {
-                logger === null || logger === void 0 ? void 0 : logger.warn('failed to remove tmp file');
-            }
+            logger === null || logger === void 0 ? void 0 : logger.debug('removed tmp files');
+        }
+        catch (error) {
+            logger === null || logger === void 0 ? void 0 : logger.warn('failed to remove tmp file');
         }
     });
     const obj = Types_1.WAProto.Message.fromObject({

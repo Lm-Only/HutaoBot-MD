@@ -215,7 +215,7 @@ export type MiscMessageGenerationOptions = MinimalRelayOptions & {
 export type MessageGenerationOptionsFromContent = MiscMessageGenerationOptions & {
     userJid: string;
 };
-export type WAMediaUploadFunction = (readStream: Readable, opts: {
+export type WAMediaUploadFunction = (encFilePath: string, opts: {
     fileEncSha256B64: string;
     mediaType: MediaType;
     timeoutMs?: number;

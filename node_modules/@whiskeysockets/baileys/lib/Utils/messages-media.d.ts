@@ -62,13 +62,12 @@ type EncryptedStreamOptions = {
 };
 export declare const encryptedStream: (media: WAMediaUpload, mediaType: MediaType, { logger, saveOriginalFileIfRequired, opts }?: EncryptedStreamOptions) => Promise<{
     mediaKey: Buffer<ArrayBufferLike>;
-    encWriteStream: Readable;
-    bodyPath: string | undefined;
+    originalFilePath: string | undefined;
+    encFilePath: string;
     mac: Buffer<ArrayBuffer>;
     fileEncSha256: Buffer<ArrayBufferLike>;
     fileSha256: Buffer<ArrayBufferLike>;
     fileLength: number;
-    didSaveToTmpPath: boolean;
 }>;
 export type MediaDownloadOptions = {
     startByte?: number;

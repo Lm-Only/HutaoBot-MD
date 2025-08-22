@@ -16,13 +16,13 @@ class USyncStatusProtocol {
         return null;
     }
     parser(node) {
-        var _a;
+        var _a, _b, _c;
         if (node.tag === 'status') {
             (0, WABinary_1.assertNodeErrorFree)(node);
-            let status = node === null || node === void 0 ? void 0 : node.content.toString();
+            let status = (_b = (_a = node === null || node === void 0 ? void 0 : node.content) === null || _a === void 0 ? void 0 : _a.toString()) !== null && _b !== void 0 ? _b : null;
             const setAt = new Date(+((node === null || node === void 0 ? void 0 : node.attrs.t) || 0) * 1000);
             if (!status) {
-                if (+((_a = node.attrs) === null || _a === void 0 ? void 0 : _a.code) === 401) {
+                if (+((_c = node.attrs) === null || _c === void 0 ? void 0 : _c.code) === 401) {
                     status = '';
                 }
                 else {
