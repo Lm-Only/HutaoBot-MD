@@ -5,12 +5,12 @@ updateBot() {
 }
 
 startWithCode() {
-  node main.js main.js cd
+  node main.js cd
 }
 
 
 startWithQr() {
-  node main.js main.js qr
+  node main.js qr
 }
 
 defaultStart() {
