@@ -1,20 +1,20 @@
 #!/bin/bash
 
 updateBot() {
-  NODE_ENV=production node --no-warnings main.js up
+  node main.js up
 }
 
 startWithCode() {
-  NODE_ENV=production node --no-warnings main.js cd
+  node main.js main.js cd
 }
 
 
 startWithQr() {
-  NODE_ENV=production node --no-warnings main.js qr
+  node main.js main.js qr
 }
 
 defaultStart() {
-  NODE_ENV=production node --no-warnings main.js
+  node main.js
 }
 
 while :
