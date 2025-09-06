@@ -9,7 +9,7 @@
  },
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/Lm260/HutaoBot-MD.git"
+  "url": "git+https://github.com/Lm-Only/HutaoBot-MD.git"
  },
  "keywords": [
   "nodejs",
@@ -19,14 +19,14 @@
  "author": "Lm Only",
  "license": "MIT",
  "bugs": {
-  "url": "https://github.com/Lm260/HutaoBot-MD/issues"
+  "url": "https://github.com/Lm-Only/HutaoBot-MD/issues"
  },
- "homepage": "https://github.com/Lm260/HutaoBot-MD#readme",
+ "homepage": "https://github.com/Lm-Only/HutaoBot-MD#readme",
  "dependencies": {
   "@google/generative-ai": "^0.24.1",
   "@lmonly/scget": "^1.0.4",
   "@vitalets/google-translate-api": "^9.2.1",
-  "@whiskeysockets/baileys": "git+https://github.com/WhiskeySockets/Baileys.git#v6.7.18",
+  "@whiskeysockets/baileys": "git+https://github.com/WhiskeySockets/Baileys.git#v6.7.19",
   "acrcloud": "^1.4.0",
   "assemblyai": "^4.9.0",
   "baileys": "^6.7.17",
@@ -50,5 +50,5 @@
   "qrcode-terminal": "^0.12.0",
   "qs": "^6.14.0"
  },
- "updates": 39
+ "updates": 52
 }

@@ -8,7 +8,6 @@ startWithCode() {
   node main.js cd
 }
 
-
 startWithQr() {
   node main.js qr
 }
