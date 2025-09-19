@@ -16,7 +16,7 @@
 
 <div align="center">
   
-[![WhatsApp](https://img.shields.io/badge/Suporte-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/IoUPlcsAdP98a7VrW3jBQp)
+[![WhatsApp](https://img.shields.io/badge/Suporte-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/lm_only_)
 </div>
 
