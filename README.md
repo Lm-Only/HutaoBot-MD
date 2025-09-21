@@ -69,7 +69,7 @@ cd /sdcard/HutaoBot-MD && npm start up
 
 **Key para ter acesso ao bot**
 
-* [__Fale Conosco__](https://wa.me/559284828701)
+* [__Fale Conosco__](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)
 
 ## Atenção 
 

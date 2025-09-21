@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cleanFilesTemp() {
+  rm -f ./*.jpg ./*.jpeg ./*.webp ./*.opus ./*.mp* ./*.m4a ./*.ogg ./*.zip
+}
+
 updateBot() {
   node main.js up
 }
@@ -19,14 +23,14 @@ defaultStart() {
 while :
 do
   echo -e "    \033[1;33mHUTAO BOT V9.5.0 EDITION 💎 ^-^\n INICIANDO, AGUARDE UM MOMENTO...🍾\033[0m"
-  if [ "$1" = "up" ]; then
-    updateBot
-  elif [ "$1" = "cd" ]; then
-    startWithCode
-  elif [ "$1" = "qr" ]; then
-    startWithQr
-  else 
-    defaultStart
-  fi
-  sleep 1
+  cleanFilesTemp
+
+  case "$1" in
+    up) updateBot ;;
+    cd) startWithCode ;;
+    qr) startWithQr ;;
+    *)  defaultStart ;;
+  esac
+
+  sleep 3
 done

@@ -1,5 +1,5 @@
-import type { USyncQueryProtocol } from '../../Types/USync.js';
-import { type BinaryNode } from '../../WABinary/index.js';
+import { USyncQueryProtocol } from '../../Types/USync';
+import { BinaryNode } from '../../WABinary';
 export type DisappearingModeData = {
     duration: number;
     setAt?: Date;
@@ -10,4 +10,3 @@ export declare class USyncDisappearingModeProtocol implements USyncQueryProtocol
     getUserElement(): null;
     parser(node: BinaryNode): DisappearingModeData | undefined;
 }
-//# sourceMappingURL=USyncDisappearingModeProtocol.d.ts.map

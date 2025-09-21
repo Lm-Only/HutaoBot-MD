@@ -1,5 +1,5 @@
-import type { USyncQueryProtocol } from '../../Types/USync.js';
-import { type BinaryNode } from '../../WABinary/index.js';
+import { USyncQueryProtocol } from '../../Types/USync';
+import { BinaryNode } from '../../WABinary';
 export type StatusData = {
     status?: string | null;
     setAt?: Date;
@@ -10,4 +10,3 @@ export declare class USyncStatusProtocol implements USyncQueryProtocol {
     getUserElement(): null;
     parser(node: BinaryNode): StatusData | undefined;
 }
-//# sourceMappingURL=USyncStatusProtocol.d.ts.map

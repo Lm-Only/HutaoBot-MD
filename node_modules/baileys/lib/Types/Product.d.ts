@@ -1,4 +1,4 @@
-import type { WAMediaUpload } from './Message.js';
+import { WAMediaUpload } from './Message';
 export type CatalogResult = {
     data: {
         paging: {
@@ -76,4 +76,3 @@ export type GetCatalogOptions = {
     limit?: number;
     jid?: string;
 };
-//# sourceMappingURL=Product.d.ts.map

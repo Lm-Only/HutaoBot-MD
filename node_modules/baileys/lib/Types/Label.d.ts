@@ -44,4 +44,3 @@ export declare enum LabelColor {
     Color19 = 18,
     Color20 = 19
 }
-//# sourceMappingURL=Label.d.ts.map

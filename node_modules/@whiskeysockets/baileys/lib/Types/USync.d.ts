@@ -1,5 +1,5 @@
-import type { BinaryNode } from '../WABinary/index.js';
-import { USyncUser } from '../WAUSync/index.js';
+import { BinaryNode } from '../WABinary';
+import { USyncUser } from '../WAUSync';
 /**
  * Defines the interface for a USyncQuery protocol
  */
@@ -23,4 +23,3 @@ export interface USyncQueryProtocol {
      */
     parser: (data: BinaryNode) => unknown;
 }
-//# sourceMappingURL=USync.d.ts.map

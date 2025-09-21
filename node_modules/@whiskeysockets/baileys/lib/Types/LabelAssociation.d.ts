@@ -27,4 +27,3 @@ export interface MessageLabelAssociationActionBody {
     labelId: string;
     messageId: string;
 }
-//# sourceMappingURL=LabelAssociation.d.ts.map

@@ -1,6 +1,6 @@
-import type { USyncQueryProtocol } from '../../Types/USync.js';
-import { type BinaryNode } from '../../WABinary/index.js';
-import { USyncUser } from '../USyncUser.js';
+import { USyncQueryProtocol } from '../../Types/USync';
+import { BinaryNode } from '../../WABinary';
+import { USyncUser } from '../USyncUser';
 export type BotProfileCommand = {
     name: string;
     description: string;
@@ -23,4 +23,3 @@ export declare class USyncBotProfileProtocol implements USyncQueryProtocol {
     getUserElement(user: USyncUser): BinaryNode;
     parser(node: BinaryNode): BotProfileInfo;
 }
-//# sourceMappingURL=UsyncBotProfileProtocol.d.ts.map
