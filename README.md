@@ -20,6 +20,15 @@
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/lm_only_)
 </div>
 
+## ATENÇÃO 
+
+**Para ter acesso ao bot é necessário comprar o arquivo**
+> Por apenas 25R$ permanente você leva ele com direito a todas as atualizações.
+
+**Compre agora mesmo:**
+
+* [__Fale Conosco__](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)
+
 ## INICIAR PELO TERMUX 🌷
 
 **Caso Não tenha o termux instalado**
@@ -63,13 +72,6 @@ cd /sdcard/HutaoBot-MD && npm start up
 > **Atualizar automaticamente**:
 > Use esse comando quando houver atualizações disponíveis.
 ------------------
-
-
-## Contratar Key
-
-**Key para ter acesso ao bot**
-
-* [__Fale Conosco__](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)
 
 ## Atenção 
 
