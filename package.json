@@ -24,23 +24,24 @@
     },
     "homepage": "https://github.com/Lm-Only/HutaoBot-MD#readme",
     "dependencies": {
-        "@google/genai": "^1.20.0",
+        "@google/genai": "^1.22.0",
         "@google/generative-ai": "^0.24.1",
         "@lmonly/scget": "^1.0.4",
         "@vitalets/google-translate-api": "^9.2.1",
-        "@whiskeysockets/baileys": "6.7.19",
+        "@whiskeysockets/baileys": "6.7.20",
         "acrcloud": "^1.4.0",
         "assemblyai": "^4.9.0",
+        "baileys": "^6.7.20",
         "cfonts": "^3.3.0",
         "chalk": "^4.0.0",
         "cheerio": "^1.0.0",
         "colors": "^1.4.0",
-        "escape-string-regexp": "^1.0.5",
+        "escape-string-regexp": "^5.0.0",
         "fake-useragent": "^1.0.1",
         "fast-yt-search": "1.0.0",
-        "file-type": "^21.0.0",
+        "file-type": "16.5.4",
         "fluent-ffmpeg": "^2.1.3",
-        "jsdom": "^25.0.1",
+        "jsdom": "^27.0.0",
         "linkifyjs": "^4.3.1",
         "moment-timezone": "^0.6.0",
         "multistream": "^4.1.0",
@@ -51,5 +52,5 @@
         "qrcode-terminal": "^0.12.0",
         "qs": "^6.14.0"
     },
-    "updates": 80
+    "updates": 82
 }
