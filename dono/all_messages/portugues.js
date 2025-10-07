@@ -470,8 +470,8 @@ const MESSAGE_GOLDS = {
 ║         [💰SLOT💰 | 777 ]        
 ║                                             
 ║           #slot1#
-║           #slot1#  ◄━━┛
-║           #slot1# 
+║           #slot2#  ◄━━┛
+║           #slot3# 
 ║
 ║           *#resultado#*    
 ║          [💰SLOT💰 | 777 ]        

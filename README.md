@@ -63,7 +63,6 @@ pkg install -y ffmpeg nodejs-lts wget tesseract git
 cd /sdcard/HutaoBot-MD && npm start
 ````
 > Use-o para toda vez que for ligar o bot!
-> É necessário **comprar** uma key para usar o bot
 ------------------
 COMANDO ADICIONAL: 🌸
 ````bash

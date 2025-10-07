@@ -549,6 +549,8 @@ return `‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Ver_aluguel 
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Lista_aluguel
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Renovar_aluguel |_Tempo_
+┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Limpar_Aluguel 
+┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Ranking_Aluguel
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Rm_aluguel 
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Revelar
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Block "@"
