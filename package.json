@@ -24,13 +24,14 @@
     },
     "homepage": "https://github.com/Lm-Only/HutaoBot-MD#readme",
     "dependencies": {
-        "@google/genai": "^1.22.0",
+        "@google/genai": "^1.23.0",
         "@google/generative-ai": "^0.24.1",
         "@lmonly/scget": "^1.0.4",
         "@vitalets/google-translate-api": "^9.2.1",
         "@whiskeysockets/baileys": "6.7.20",
         "acrcloud": "^1.4.0",
         "assemblyai": "^4.9.0",
+        "audio-decode": "^2.2.3",
         "cfonts": "^3.3.0",
         "chalk": "^4.0.0",
         "cheerio": "^1.0.0",
@@ -48,7 +49,8 @@
         "node-webpmux": "^3.2.1",
         "performance-now": "^2.1.0",
         "qrcode-terminal": "^0.12.0",
-        "qs": "^6.14.0"
+        "qs": "^6.14.0",
+        "sharp": "^0.34.4"
     },
-    "updates": 90
+    "updates": 92
 }

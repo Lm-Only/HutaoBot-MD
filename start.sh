@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cleanFilesTemp() {
-  rm -f ./*.jpg ./*.jpeg ./*.webp ./*.opus ./*.mp* ./*.m4a ./*.ogg ./*.zip
+  rm -f ./*.jpg ./*.jpeg ./*.webp ./*.opus ./*.mp* ./*.m4a ./*.ogg ./*.zip ./*.gz
 }
 
 updateBot() {
@@ -32,5 +32,5 @@ do
     *)  defaultStart ;;
   esac
 
-  sleep 3
+  sleep 5
 done
