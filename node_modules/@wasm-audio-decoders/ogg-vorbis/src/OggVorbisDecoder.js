@@ -127,17 +127,18 @@ export function Decoder() {
       this._outputSamples += samplesDecoded;
 
       // handle any errors that may have occurred
-      for (let i = 0; i < this._errorsLength.buf; i += 2)
+      for (let i = 0; i < this._errorsLength.buf; i += 2) {
+        const errorDescription = this._common.codeToString(this._errors.buf[i]);
+        const functionName = this._common.codeToString(this._errors.buf[i + 1]);
+
         errors.push({
-          message:
-            this._common.codeToString(this._errors.buf[i]) +
-            " " +
-            this._common.codeToString(this._errors.buf[i + 1]),
+          message: errorDescription + " vorbis_synthesis" + functionName,
           frameLength: packet.length,
           frameNumber: this._frameNumber,
           inputBytes: this._inputBytes,
           outputSamples: this._outputSamples,
         });
+      }
 
       // clear the error buffer
       this._errorsLength.buf[0] = 0;
@@ -231,8 +232,7 @@ export default class OggVorbisDecoder {
 
         if (oggPage[codecFrames].length) {
           const headerData = oggPage[codecFrames][0][header];
-
-          this._decoder.sendSetupHeader(headerData[vorbisComments]);
+          // skip the vorbis comment; an empty comment packet will be used
           this._decoder.sendSetupHeader(headerData[vorbisSetup]);
           this._decoder.initDsp();
 

@@ -1,23 +1,10 @@
 #!/bin/bash
 
+MAX_OPEN=$(ulimit -Hn 2>/dev/null || echo 1024)
+ulimit -n $MAX_OPEN
+
 cleanFilesTemp() {
-  rm -f ./*.jpg ./*.jpeg ./*.webp ./*.opus ./*.mp* ./*.m4a ./*.ogg ./*.zip ./*.gz
-}
-
-updateBot() {
-  node main.js up
-}
-
-startWithCode() {
-  node main.js cd
-}
-
-startWithQr() {
-  node main.js qr
-}
-
-defaultStart() {
-  node main.js
+  rm -f ./*.jpg ./*.jpeg ./*.webp ./*.opus ./*.mp* ./*.m4a ./*.ogg ./*.zip
 }
 
 while :
@@ -26,11 +13,11 @@ do
   cleanFilesTemp
 
   case "$1" in
-    up) updateBot ;;
-    cd) startWithCode ;;
-    qr) startWithQr ;;
-    *)  defaultStart ;;
+    up) node main.js up ;;
+    cd) node main.js cd ;;
+    qr) node main.js qr ;;
+    *)  node main.js ;;
   esac
 
-  sleep 5
+  sleep 3
 done
