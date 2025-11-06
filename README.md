@@ -42,7 +42,7 @@
 > [Baixe aqui](https://github.com/Lm-Only/HutaoBot-MD/archive/refs/heads/main.zip)
 ------------------
 2 - PASSO: 💖
-> • Entre no seu servidor na hospedagem, procure a opção de **upload** e procure pelo arquivo baixado. (geralmente no celular fica na pasta **downloads**).
+> • Entre no seu servidor na hospedagem, procure a opção de **upload** e procure pelo arquivo baixado. (geralmente no celular fica na pasta **downloads** com o nome **HutaoBot-MD-main.zip**).
 ------------------
 3 - PASSO: 💖
 > • Após selecionar o arquivo, é necessário extrair corretamente. (geralmente tem que mover o todos os arquivos  de dentro da pasta pra fora após extrair)
