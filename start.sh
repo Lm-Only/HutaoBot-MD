@@ -1,10 +1,7 @@
 #!/bin/bash
 
-MAX_OPEN=$(ulimit -Hn 2>/dev/null || echo 1024)
-ulimit -n $MAX_OPEN
-
 cleanFilesTemp() {
-  rm -f ./*.jpg ./*.jpeg ./*.webp ./*.opus ./*.mp* ./*.m4a ./*.ogg ./*.zip
+  rm -f ./*.jpg ./*.jpeg ./*.webp ./*.opus ./*.mp* ./*.m4a ./*.ogg ./*.zip ./*.bak
 }
 
 while :

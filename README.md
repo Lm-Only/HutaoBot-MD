@@ -60,9 +60,18 @@ pkg install -y ffmpeg nodejs-lts wget tesseract git
 ````
 4 - COMANDO: 🌸
 ````bash
+git clone https://github.com/Lm-Only/HutaoBot-MD
+````
+> Baixar os arquivos do bot.
+------------------
+5 - COMANDO: 🌸
+````bash
 cd /sdcard/HutaoBot-MD && npm start
 ````
 > Use-o para toda vez que for ligar o bot!
+> Muita atenção na hora de colar a key.
+> É necessário entrar em contato com o vendedor.
+> Fazer a compra e colar a key que ele enviar.
 ------------------
 COMANDO ADICIONAL: 🌸
 ````bash
