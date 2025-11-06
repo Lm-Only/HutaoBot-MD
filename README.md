@@ -45,7 +45,7 @@
 > • Entre no seu servidor na hospedagem, procure a opção de **upload** e procure pelo arquivo baixado. (geralmente no celular fica na pasta **downloads** com o nome **HutaoBot-MD-main.zip**).
 ------------------
 3 - PASSO: 💖
-> • Após selecionar o arquivo, é necessário extrair corretamente. (na maioria das vezez tem que mover o todos os arquivos de dentro da pasta HutaoBot-MD-main pra fora após extrair)
+> • Após selecionar o arquivo, é necessário extrair corretamente. (na maioria das vezes tem que mover o todos os arquivos de dentro da pasta HutaoBot-MD-main pra fora após extrair)
 ------------------
 4 - PASSO: 💖
 > • Inicie o servidor e espere o bot pedir a key caso ainda não tenha. (você deve comprar a key e colar quando pedir)
