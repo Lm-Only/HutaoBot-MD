@@ -29,6 +29,29 @@
 
 * [__Fale Conosco__](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)
 
+## INICIAR POR HOSPEDAGEM 💎
+
+**Você precisa ter um login na sua hospedagem e um servidor criado**
+
+## Passos simples: ✨️
+
+> Dependendo da sua hospedagem, podem conter diferenças entre parâmetros, nomes e botões.
+------------------
+1 - PASSO: 💖
+> Baixe o arquivo ZIP do bot
+> [Baixe aqui](https://github.com/Lm-Only/HutaoBot-MD/archive/refs/heads/main.zip)
+------------------
+2 - PASSO: 💖
+> • Entre no seu servidor na hospedagem, procure a opção de **upload** e procure pelo arquivo baixado. (geralmente no celular fica na pasta **downloads**).
+------------------
+3 - PASSO: 💖
+> • Após selecionar o arquivo, é necessário extrair corretamente. (geralmente tem que mover o todos os arquivos  de dentro da pasta pra fora após extrair)
+------------------
+4 - PASSO: 💖
+> • Inicie o servidor e espere o bot pedir a key caso ainda não tenha. (você deve comprar a key e colar quando pedir)
+------------------
+
+
 ## INICIAR PELO TERMUX 🌷
 
 **Caso Não tenha o termux instalado**
