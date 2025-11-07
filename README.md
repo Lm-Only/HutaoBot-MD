@@ -83,7 +83,7 @@ pkg install -y ffmpeg nodejs-lts wget tesseract git
 ````
 4 - COMANDO: 🌸
 ````bash
-git clone https://github.com/Lm-Only/HutaoBot-MD
+cd /sdcard && git clone https://github.com/Lm-Only/HutaoBot-MD
 ````
 > Baixar os arquivos do bot.
 ------------------
