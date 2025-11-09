@@ -1,5 +1,5 @@
 import { KEY_BUNDLE_TYPE } from '../Defaults/index.js';
-import { assertNodeErrorFree, getBinaryNodeChild, getBinaryNodeChildBuffer, getBinaryNodeChildren, getBinaryNodeChildUInt, getServerFromDomainType, jidDecode, S_WHATSAPP_NET, WAJIDDomains } from '../WABinary/index.js';
+import { assertNodeErrorFree, getBinaryNodeChild, getBinaryNodeChildBuffer, getBinaryNodeChildren, getBinaryNodeChildUInt, jidDecode, S_WHATSAPP_NET } from '../WABinary/index.js';
 import { Curve, generateSignalPubKey } from './crypto.js';
 import { encodeBigEndian } from './generics.js';
 function chunk(array, size) {
@@ -75,7 +75,7 @@ export const parseAndInjectE2ESessions = async (node, repository) => {
     const chunkSize = 100;
     const chunks = chunk(nodes, chunkSize);
     for (const nodesChunk of chunks) {
-        for (const node of nodesChunk) {
+        await Promise.all(nodesChunk.map(async (node) => {
             const signedKey = getBinaryNodeChild(node, 'skey');
             const key = getBinaryNodeChild(node, 'key');
             const identity = getBinaryNodeChildBuffer(node, 'identity');
@@ -90,33 +90,24 @@ export const parseAndInjectE2ESessions = async (node, repository) => {
                     preKey: extractKey(key)
                 }
             });
-        }
+        }));
     }
 };
-export const extractDeviceJids = (result, myJid, myLid, excludeZeroDevices) => {
+export const extractDeviceJids = (result, myJid, excludeZeroDevices) => {
     const { user: myUser, device: myDevice } = jidDecode(myJid);
     const extracted = [];
     for (const userResult of result) {
         const { devices, id } = userResult;
-        const decoded = jidDecode(id), { user, server } = decoded;
-        let { domainType } = decoded;
+        const { user } = jidDecode(id);
         const deviceList = devices?.deviceList;
-        if (!Array.isArray(deviceList))
-            continue;
-        for (const { id: device, keyIndex, isHosted } of deviceList) {
-            if ((!excludeZeroDevices || device !== 0) && // if zero devices are not-excluded, or device is non zero
-                ((myUser !== user && myLid !== user) || myDevice !== device) && // either different user or if me user, not this device
-                (device === 0 || !!keyIndex) // ensure that "key-index" is specified for "non-zero" devices, produces a bad req otherwise
-            ) {
-                if (isHosted) {
-                    domainType = domainType === WAJIDDomains.LID ? WAJIDDomains.HOSTED_LID : WAJIDDomains.HOSTED;
+        if (Array.isArray(deviceList)) {
+            for (const { id: device, keyIndex } of deviceList) {
+                if ((!excludeZeroDevices || device !== 0) && // if zero devices are not-excluded, or device is non zero
+                    (myUser !== user || myDevice !== device) && // either different user or if me user, not this device
+                    (device === 0 || !!keyIndex) // ensure that "key-index" is specified for "non-zero" devices, produces a bad req otherwise
+                ) {
+                    extracted.push({ user, device });
                 }
-                extracted.push({
-                    user,
-                    device,
-                    domainType,
-                    server: getServerFromDomainType(server, domainType)
-                });
             }
         }
     }

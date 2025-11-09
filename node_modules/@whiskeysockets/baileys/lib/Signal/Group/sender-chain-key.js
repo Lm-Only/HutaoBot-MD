@@ -1,3 +1,4 @@
+/* @ts-ignore */
 import { calculateMAC } from 'libsignal/src/crypto.js';
 import { SenderMessageKey } from './sender-message-key.js';
 export class SenderChainKey {
@@ -5,7 +6,12 @@ export class SenderChainKey {
         this.MESSAGE_KEY_SEED = Buffer.from([0x01]);
         this.CHAIN_KEY_SEED = Buffer.from([0x02]);
         this.iteration = iteration;
-        this.chainKey = Buffer.from(chainKey);
+        if (chainKey instanceof Buffer) {
+            this.chainKey = chainKey;
+        }
+        else {
+            this.chainKey = Buffer.from(chainKey || []);
+        }
     }
     getIteration() {
         return this.iteration;

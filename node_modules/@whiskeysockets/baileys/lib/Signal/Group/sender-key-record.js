@@ -33,8 +33,17 @@ export class SenderKeyRecord {
         return this.senderKeyStates.map(state => state.getStructure());
     }
     static deserialize(data) {
-        const str = Buffer.from(data).toString('utf-8');
-        const parsed = JSON.parse(str, BufferJSON.reviver);
+        let parsed;
+        if (typeof data === 'string') {
+            parsed = JSON.parse(data, BufferJSON.reviver);
+        }
+        else if (data instanceof Uint8Array) {
+            const str = Buffer.from(data).toString('utf-8');
+            parsed = JSON.parse(str, BufferJSON.reviver);
+        }
+        else {
+            parsed = data;
+        }
         return new SenderKeyRecord(parsed);
     }
 }

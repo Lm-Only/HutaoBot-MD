@@ -1,7 +1,7 @@
 import { proto } from '../../WAProto/index.js';
-import { WAMessageAddressingMode, WAMessageStubType } from '../Types/index.js';
+import { WAMessageStubType } from '../Types/index.js';
 import { generateMessageIDV2, unixTimestampSeconds } from '../Utils/index.js';
-import { getBinaryNodeChild, getBinaryNodeChildren, getBinaryNodeChildString, isLidUser, isPnUser, jidEncode, jidNormalizedUser } from '../WABinary/index.js';
+import { getBinaryNodeChild, getBinaryNodeChildren, getBinaryNodeChildString, isJidUser, isLidUser, jidEncode, jidNormalizedUser } from '../WABinary/index.js';
 import { makeChatsSocket } from './chats.js';
 export const makeGroupsSocket = (config) => {
     const sock = makeChatsSocket(config);
@@ -51,7 +51,6 @@ export const makeGroupsSocket = (config) => {
                 data[meta.id] = meta;
             }
         }
-        // TODO: properly parse LID / PN DATA
         sock.ev.emit('groups.update', Object.values(data));
         return data;
     };
@@ -238,7 +237,7 @@ export const makeGroupsSocket = (config) => {
                     participant: key.remoteJid
                 },
                 messageStubType: WAMessageStubType.GROUP_PARTICIPANT_ADD,
-                messageStubParameters: [JSON.stringify(authState.creds.me)],
+                messageStubParameters: [authState.creds.me.id],
                 participant: key.remoteJid,
                 messageTimestamp: unixTimestampSeconds()
             }, 'notify');
@@ -274,12 +273,12 @@ export const extractGroupMetadata = (result) => {
     let desc;
     let descId;
     let descOwner;
-    let descOwnerPn;
+    let descOwnerJid;
     let descTime;
     if (descChild) {
         desc = getBinaryNodeChildString(descChild, 'body');
         descOwner = descChild.attrs.participant ? jidNormalizedUser(descChild.attrs.participant) : undefined;
-        descOwnerPn = descChild.attrs.participant_pn ? jidNormalizedUser(descChild.attrs.participant_pn) : undefined;
+        descOwnerJid = descChild.attrs.participant_pn ? jidNormalizedUser(descChild.attrs.participant_pn) : undefined;
         descTime = +descChild.attrs.t;
         descId = descChild.attrs.id;
     }
@@ -288,21 +287,20 @@ export const extractGroupMetadata = (result) => {
     const memberAddMode = getBinaryNodeChildString(group, 'member_add_mode') === 'all_member_add';
     const metadata = {
         id: groupId,
-        notify: group.attrs.notify,
-        addressingMode: group.attrs.addressing_mode === 'lid' ? WAMessageAddressingMode.LID : WAMessageAddressingMode.PN,
+        addressingMode: group.attrs.addressing_mode,
         subject: group.attrs.subject,
         subjectOwner: group.attrs.s_o,
-        subjectOwnerPn: group.attrs.s_o_pn,
+        subjectOwnerJid: group.attrs.s_o_pn,
         subjectTime: +group.attrs.s_t,
         size: group.attrs.size ? +group.attrs.size : getBinaryNodeChildren(group, 'participant').length,
         creation: +group.attrs.creation,
         owner: group.attrs.creator ? jidNormalizedUser(group.attrs.creator) : undefined,
-        ownerPn: group.attrs.creator_pn ? jidNormalizedUser(group.attrs.creator_pn) : undefined,
+        ownerJid: group.attrs.creator_pn ? jidNormalizedUser(group.attrs.creator_pn) : undefined,
         owner_country_code: group.attrs.creator_country_code,
         desc,
         descId,
         descOwner,
-        descOwnerPn,
+        descOwnerJid,
         descTime,
         linkedParent: getBinaryNodeChild(group, 'linked_parent')?.attrs.jid || undefined,
         restrict: !!getBinaryNodeChild(group, 'locked'),
@@ -312,11 +310,10 @@ export const extractGroupMetadata = (result) => {
         joinApprovalMode: !!getBinaryNodeChild(group, 'membership_approval_mode'),
         memberAddMode,
         participants: getBinaryNodeChildren(group, 'participant').map(({ attrs }) => {
-            // TODO: Store LID MAPPINGS
             return {
                 id: attrs.jid,
-                phoneNumber: isLidUser(attrs.jid) && isPnUser(attrs.phone_number) ? attrs.phone_number : undefined,
-                lid: isPnUser(attrs.jid) && isLidUser(attrs.lid) ? attrs.lid : undefined,
+                jid: isJidUser(attrs.jid) ? attrs.jid : jidNormalizedUser(attrs.phone_number),
+                lid: isLidUser(attrs.jid) ? attrs.jid : attrs.lid,
                 admin: (attrs.type || null)
             };
         }),

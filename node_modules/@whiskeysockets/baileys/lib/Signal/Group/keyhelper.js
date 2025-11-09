@@ -1,4 +1,5 @@
 import * as nodeCrypto from 'crypto';
+/* @ts-ignore */
 import { generateKeyPair } from 'libsignal/src/curve.js';
 export function generateSenderKey() {
     return nodeCrypto.randomBytes(32);

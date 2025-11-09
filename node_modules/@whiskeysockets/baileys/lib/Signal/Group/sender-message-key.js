@@ -1,3 +1,4 @@
+/* @ts-ignore */
 import { deriveSecrets } from 'libsignal/src/crypto.js';
 export class SenderMessageKey {
     constructor(iteration, seed) {

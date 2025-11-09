@@ -8,16 +8,8 @@ export class USyncLIDProtocol {
             attrs: {}
         };
     }
-    getUserElement(user) {
-        if (user.lid) {
-            return {
-                tag: 'lid',
-                attrs: { jid: user.lid }
-            };
-        }
-        else {
-            return null;
-        }
+    getUserElement() {
+        return null;
     }
     parser(node) {
         if (node.tag === 'lid') {
