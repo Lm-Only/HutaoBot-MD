@@ -20,14 +20,9 @@
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/lm_only_)
 </div>
 
-## ATENÇÃO 
-
-**Para ter acesso ao bot é necessário comprar o arquivo**
-> Por apenas 25R$ permanente você leva ele com direito a todas as atualizações.
-
-**Compre agora mesmo:**
-
-* [__Fale Conosco__](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)
+# ATENÇÃO!!
+> [!IMPORTANT]
+> **Para acessar o bot, é necessário adquirir o arquivo. Por apenas R$25,00 permanente; você recebe uma chave de acesso vitalício, que permite utilização ilimitada do bot. [__Fale Conosco__](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)**
 
 ## INICIALIZAÇÃO 🔮
 
