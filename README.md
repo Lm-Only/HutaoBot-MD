@@ -29,6 +29,12 @@
 
 * [__Fale Conosco__](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)
 
+## INICIALIZAÇÃO 🔮
+
+ * [__Iniciar por Hospedagem__](https://github.com/Lm-Only/HutaoBot-MD?tab=readme-ov-file#iniciar-por-hospedagem-)
+ * [__Iniciar por Termux__](https://github.com/Lm-Only/HutaoBot-MD?tab=readme-ov-file#iniciar-pelo-termux-)
+------------------
+
 ## INICIAR POR HOSPEDAGEM 💎
 
 **Você precisa ter um login na sua hospedagem e um servidor criado**
