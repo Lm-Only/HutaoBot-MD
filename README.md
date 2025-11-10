@@ -22,7 +22,7 @@
 
 # ATENÇÃO!!
 > [!IMPORTANT]
-> **Para acessar o bot, é necessário adquirir o arquivo. Por apenas R$25,00 permanente; você recebe uma chave de acesso vitalício, que permite utilização ilimitada do bot. [__Fale Conosco__](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)**
+> **Para acessar o bot, é necessário adquirir o arquivo. Por apenas R$25,00 reais você recebe uma chave de acesso vitalício, que permite utilização ilimitada do bot. [__Fale Conosco__](https://wa.me/559181377883?text=olá%20suporte%20da%20HutaoBot-MD)**
 
 ## INICIALIZAÇÃO 🔮
 
