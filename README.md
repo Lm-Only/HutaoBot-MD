@@ -16,13 +16,13 @@
 
 <div align="center">
   
-[![WhatsApp](https://img.shields.io/badge/Suporte-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/559284828701?text=olá%20suporte%20da%20HutaoBot-MD)
+[![WhatsApp](https://img.shields.io/badge/Suporte-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/559284828701?text=/ajuda)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/lm_only_)
 </div>
 
 # ATENÇÃO!!
 > [!IMPORTANT]
-> **Para acessar o bot, é necessário adquirir o arquivo. Por apenas R$30,00 reais você recebe uma chave de acesso vitalício, que permite utilização ilimitada do bot. [__Fale Conosco__](https://wa.me/559284828701?text=/ajuda)**
+> **Para acessar o bot, é necessário adquirir o arquivo. Por apenas R$30,00 reais você recebe uma chave de acesso vitalício, que permite utilização ilimitada do bot. [__Fale Conosco__](https://wa.me//559284828701?text=Comprar%20acesso%20permanente%20da%20HutaoBot-MD!%20)**
 
 ## INICIALIZAÇÃO 🔮
 
