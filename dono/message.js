@@ -13,20 +13,21 @@ const txt = {
     only_adm: "*VOCÊ NÃO É ADM PARA EXECUTAR ESSE COMANDO! 😾*",
 
     only_vip: "*COMANDO É EXCLUSIVO APENAS PARA OS VIP. 🍸💸*",
-    
-    //Comando sugerido por @Becca
+
     add_parceria: "*Sucesso*!! Agora @#nmr# poderá enviar links #quantidade#... ✨️",
 
-    //Comando sugerido por @Becca
+    ANTI_STATUS: {
+        message: "• ⚠️ `MESSAGEM PROIBIDA!` ⚠️ •\n\n-> Menção de status é proibido neste grupo! ❌️\n-> Você sera removido por quebrar as regras. 😡", // '0', //Para não responder
+        deleteMessage: true, // false,
+        banUser: true, //false,
+    },
+
     del_parceria: "*Sucesso*!! Agora @#nmr# não poderá enviar links neste grupo... ✨️",
 
-    //Comando sugerido por @Becca
     reached_limit: "@#nmr# seu limite diário de divulgações esgotou, volte no próximo dia para divulgar novamente ou contrate um ADM! 🙇‍♀️",
 
-    //Comando sugerido por @Becca
     mess_parceria: "Tudo certo, @#nmr#!\n Você ainda pode divulgar #quantidade#... ✨️",
 
-    //Comando sugerido por @Becca
     not_parceria: "@#nmr# você não tem parceria com o nosso grupo, contrate algum adm para que você possa divulgar aqui! ❣️",
 
     only_group: "🔒 *COMANDO DISPONÍVEL APENAS PARA GRUPOS. 🙇‍♀️*",
@@ -36,7 +37,7 @@ const txt = {
     LinkDetect: "0",
 
     isBotAdm: "*Eu preciso ser ADM do grupo* 🥺",
-    
+
     aluguelVencidoGrupo: "⚠️᪶ᩧᰰ ૭ ׄ *ALUGUEL EXPIRADO*\n\n```O período de uso deste grupo foi encerrado 😢.\nPara continuar com o acesso, é necessário renovar 💸.\nfale diretamente com meu responsável 💬.```\n> wa.me/#dono#\n\n✰ۣۜۜ͜͡#nomebot#",
 
     packname: "➮ 𝑪𝒓𝒊𝒂𝒅𝒂 𝒑𝒐𝒓: 💖\n↳ 『 #nomedobot# 』\n\n➮ 𝑵𝒊𝒄𝒌 𝑫𝒐𝒏𝒐: 👑\n↳ 『 #nomedodono# 』⁩\n─────",
@@ -84,9 +85,9 @@ const txt = {
     Ban_Listanegra_global: "*Olha só quem deu as cara #nmr# 😈 agora mete o pé daqui vagabundo(a)*",
 
     simi_palavras_proibidas: ["puta","gay","lixo","viado","macaco","preto"],
-    
+
     message_play: "    ⸺͟͞ꪶ𝐁𝐄𝐌 ꪜ𝐈𝐍𝐃𝚯 (𝚫)᭄\n  ↳ 『 @#nmr# 』 - ♪\n-\n     ⸺͟͞ꪶ𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝙲̧𝙾̃𝙴𝚂᭄ 🎶 ↴\n-\n ஓீ፝͜͡🌃 ➮ 𝚃𝚒𝚝𝚞𝚕𝚘⧽ #titulo#\n ஓீ፝͜͡⏳ ➮ 𝚃𝚎𝚖𝚙𝚘⧽ #tempo#\n ஓீ፝͜͡🌌 ➮ 𝚅𝚒𝚎𝚠𝚜⧽ #views#\n ஓீ፝͜͡🌸 ➮ 𝙰𝚞𝚝𝚑𝚘𝚛⧽ #author#\n ஓீ፝͜͡✨ ➮ 𝙿𝚞𝚋𝚕𝚒𝚌𝚊𝚍𝚘⧽ #publicado#\n ஓீ፝͜͡🌠 ➮ 𝙳𝚎𝚜𝚌𝚛𝚒𝚌̧𝚊̃𝚘⧽ #desc#\n\n-\n     ✨𝑬𝒏𝒗𝒊𝒂𝒏𝒅𝒐... 𝑨𝒈𝒖𝒂𝒓𝒅𝒆 𝒖𝒎 𝒑𝒐𝒖𝒄𝒐...🌙\n-\n  #time#\nılı.lıllılı.ıllı..ılı.lıllılı.ıllı",
-    
+
     message_perfil: "╭━✰°❀•°✮•| ⊱✿⊰ |•°•❀°✾✰━╮\n┝⋆⃟ۣۜ᭪➮ 𝐌𝐄𝐔 𝐏𝐄𝐑𝐅𝐈𝐋 『🥂』\n╰━✰°❀•°✮•| ⊱✿⊰ |•°•❀°✾✰━╯\n│╭━━───────━━╮\n│╎❒᭄꥓〭🌌 𝐍𝐎𝐌𝐄 - 『 #nome# 』\n│╎❒᭄꥓〭📱𝐍𝐔𝐌𝐄𝐑𝐎 - 『 #nmr# 』\n│╎❒᭄꥓〭💖 𝐁𝐈𝐎 - 『 #bio# 』\n│╎❒᭄꥓〭🔮 𝐂𝐎𝐍𝐄𝐂𝐓𝐀𝐃𝐎 𝐄𝐌 - 『 #aparelho# 』\n│┝─✰°❀•°✮•─✰°❀•°✮•𖦹५ॱ\n│╎❒᭄꥓〭👑 𝐃𝐎𝐍𝐎 -➮〘#dono#〙\n│╎❒᭄꥓〭🩸 𝐋𝐈𝐃𝐄𝐑 -➮〘#lider#〙\n│╎❒᭄꥓〭🔱 𝐀𝐃𝐌 -➮〘#adm#〙\n│╎❒᭄꥓〭💸 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 -➮〘#premium#〙\n│╎❒᭄꥓〭💰 𝐒𝐀𝐋𝐃𝐎 -➮ 〘 #saldo# 〙\n│╎❒᭄꥓〭💌 𝐄𝐒𝐓𝐀 𝐂𝐀𝐒𝐀𝐃𝐎 -➮ 〘 #casado# 〙\n│╰━━───────━━╯\n╰━━━✰°❀•°✮°•❀°✾✰━━━╯\n╎\n╭━✰°❀•°✮•| ⊱✿⊰ |•°•❀°✾✰━╮\n┝⋆⃟ۣۜ᭪➮ 𝐏𝐄𝐑𝐒𝐎𝐍𝐀𝐋𝐈𝐃𝐀𝐃𝐄 『💋』\n╰━✰°❀•°✮•| ⊱✿⊰ |•°•❀°✾✰━╯\n│╭━━───────━━╮\n│╎🐂𝙉𝙄𝙑𝙀𝙇-𝙂𝘼𝘿𝙊⧽ #lvlgado#\n│╎🌸𝙉𝙄𝙑𝙀𝙇-𝙋𝙐𝙏𝘼⧽ #lvlputa#\n│╎🥵𝙉𝙄𝙑𝙀𝙇-𝙂𝙊𝙓𝙏𝙊𝙎𝙐𝙍𝘼⧽ #lvlgostosa#\n│╎😍𝙉𝙄𝙑𝙀𝙇-𝘽𝙀𝙇𝙀𝙕𝘼⧽ #lvlbeleza#\n│╎🍼𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝘼⧽ ( R$#programa# )\n│╰━━───────━━╯\n╰━━━✰°❀•°✮°•❀°✾✰━━━╯\n╎\n╭━✰°❀•°✮•| ⊱✿⊰ |•°•❀°✾✰━╮\n┝⋆⃟ۣۜ᭪➮ 𝐒𝐄𝐔𝐒 𝐃𝐀𝐃𝐎𝐒 『✨』\n╰━✰°❀•°✮•| ⊱✿⊰ |•°•❀°✾✰━╯\n│╭━━───────━━╮\n│╎░⃟⃛ ➮𝙼𝙴𝙽𝚂𝙰𝙶𝙴𝙼𝚂 #msgs# - 💬\n│╎░⃟⃛ ➮𝙲𝙾𝙈𝙰𝙉𝙳𝙊𝚂 #cmds# - ♨️\n│╎░⃟⃛ ➮𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝚂 #stickers# - 💖\n│╰━━───────━━╯\n╰━━━✰°❀•°✮°•❀°✾✰━━━╯\n\n📜 𝑪𝒐𝒏𝒔𝒆𝒍𝒉𝒐 ↴ \n\n#conselho#\n\n𝐁𝐨𝐭: #bot#\n\n✰✰✰✰✰",
 
     texto_casal: "*OWHHT*😻🥺......\n            *❣️EU SHIPO ELES 2❣️*\n\n ⸺͟͞ꪶ🌙⧽ #nmr1#\n💞\n ⸺͟͞ꪶ☀️⧽ #nmr2#\n\n*Com uma porcentagem de⧽ ✰ #porcentagem#% ✰*🙅‍♀️",
