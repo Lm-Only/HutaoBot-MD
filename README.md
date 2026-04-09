@@ -14,11 +14,17 @@
 <img title="Versão" src="https://img.shields.io/badge/Versão-9.5.0-orange.svg?style=for-the-badge&logo=github"></a>
 </p>
 
-<div align="center">
-  
-[![WhatsApp](https://img.shields.io/badge/Suporte-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/559284828701?text=/ajuda)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/lm_only_)
-</div>
+<p align="center">
+  <a href="https://wa.me/559284828701?text=/ajuda">
+    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
+  </a>
+  <a href="https://instagram.com/lm_only_">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+  </a>
+  <a href="https://youtube.com/@SEU_CANAL">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
+  </a>
+</p>
 
 # ATENÇÃO!!
 > [!IMPORTANT]
