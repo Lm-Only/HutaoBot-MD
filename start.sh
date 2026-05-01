@@ -1,7 +1,9 @@
 #!/bin/bash
 
+ulimit -n 1024
+
 cleanFilesTemp() {
-  rm -f ./*.jpg ./*.jpeg ./*.webp ./*.opus ./*.mp* ./*.m4a ./*.ogg ./*.zip ./*.bak
+  rm -f ./*.jpg ./*.jpeg ./*.webp ./*.opus ./*.mp* ./*.m4a ./*.ogg ./*.zip ./*.bak ./*.png
 }
 
 while :
@@ -15,6 +17,12 @@ do
     qr) node main.js qr ;;
     *)  node main.js ;;
   esac
+
+  EXIT_CODE=$?
+
+  if [ $EXIT_CODE -ne 0 ]; then
+    echo "Parece que o bot esta com problemas, tente executar 'npm run help' para tentar corrigir o erro."
+  fi
 
   sleep 3
 done

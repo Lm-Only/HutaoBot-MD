@@ -16,11 +16,7 @@ const txt = {
 
     add_parceria: "*Sucesso*!! Agora @#nmr# poderá enviar links #quantidade#... ✨️",
 
-    ANTI_STATUS: {
-        message: "• ⚠️ `MESSAGEM PROIBIDA!` ⚠️ •\n\n-> Menção de status é proibido neste grupo! ❌️\n-> Você sera removido por quebrar as regras. 😡", // '0', //Para não responder
-        deleteMessage: true, // false,
-        banUser: true, //false,
-    },
+    ANTI_STATUS: {"message":"• ⚠️ `MESSAGEM PROIBIDA!` ⚠️ •\n\n-> Menção de status é proibido neste grupo! ❌️\n-> Você sera removido por quebrar as regras. 😡","deleteMessage":true,"banUser":true},
 
     del_parceria: "*Sucesso*!! Agora @#nmr# não poderá enviar links neste grupo... ✨️",
 
