@@ -79,7 +79,6 @@ return `┏═•✭･ﾟ✧*･ﾟ| ⊱✿⊰ |*✭˚･ﾟ✧･ﾟ•═┓
 ┃╎్మాై🕋 ${prefixo}Dicionário "palavra"
 ┃╎్మాై🕋 ${prefixo}CriarImg 
 ┃╎్మాై🕋 ${prefixo}Npm
-┃╎్మాై🕋 ${prefixo}BingImg
 ┃╎్మాై🕋 ${prefixo}noticias
 ┃╎్మాై🕋 ${prefixo}Terra
 ┃╎్మాై🕋 ${prefixo}buscar "txt"
@@ -511,6 +510,7 @@ return `‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
 ┏═•✭･ﾟ✧*･ﾟ| ⊱✿⊰ |*✭˚･ﾟ✧･ﾟ•═┓
 ┃╭━━─ ≪ •❈• ≫ ─━━╮
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}ConfigurarBot "_Como Configurar_"
+┃╎✰ۣۜۜ͜͡🩸 ${prefixo}FotoMenu
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Db 
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}Rgfigu <command>
 ┃╎✰ۣۜۜ͜͡🩸 ${prefixo}RmFigu <position>
