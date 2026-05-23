@@ -1,8 +1,8 @@
-<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=2500&color=C60404&center=falso&vCenter=falso&lines=𝑯𝒖𝒕𝒂𝒐𝑩𝒐𝒕-𝑴𝑫+✿+V9.5.0✓;𝐁𝐎𝐓+𝐌𝐔𝐋𝐓𝐈+𝐃𝐄𝐕𝐈𝐂𝐄;✰✰✰✰✰">
+<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=2500&color=C60404&center=falso&vCenter=falso&lines=𝑯𝒖𝒕𝒂𝒐𝑩𝒐𝒕-𝑴𝑫+✿+V9.5.5✓;𝐁𝐎𝐓+𝐌𝐔𝐋𝐓𝐈+𝐃𝐄𝐕𝐈𝐂𝐄;✰✰✰✰✰">
 
 <h1 align="center">
 <p>
-<img src= "https://i.postimg.cc/KzTGt74S/IMG-20250725-WA0312.jpg" alt="HUTAO-BOT V9.5.0✓" width="720">
+<img src= "https://i.postimg.cc/KzTGt74S/IMG-20250725-WA0312.jpg" alt="HUTAO-BOT V9.5.5✓" width="720">
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 
 <p align="center">
 <img title="Autor" src="https://img.shields.io/badge/Autor-LmOnly-orange.svg?style=for-the-badge&logo=github"></a>
-<img title="Versão" src="https://img.shields.io/badge/Versão-9.5.0-orange.svg?style=for-the-badge&logo=github"></a>
+<img title="Versão" src="https://img.shields.io/badge/Versão-9.5.5-orange.svg?style=for-the-badge&logo=github"></a>
 </p>
 
 <p align="center">
@@ -34,6 +34,15 @@
 
  * [__Iniciar por Hospedagem__](https://github.com/Lm-Only/HutaoBot-MD?tab=readme-ov-file#iniciar-por-hospedagem-)
  * [__Iniciar por Termux__](https://github.com/Lm-Only/HutaoBot-MD?tab=readme-ov-file#iniciar-pelo-termux-)
+ 
+------------------
+
+## TUTORIAIS - YouTube 🌟
+
+ * [__Tutorial de como instalar__](https://youtu.be/UEayN52fsco)
+ * [__Tutorial de como atualizar__](https://youtu.be/7B5EkX5PFFk)
+ * [__Tutorial de como Editar o Auto Resposta__](https://youtu.be/VjOEOy4mrUc)
+> Veja mais em nosso canal do YouTube [__Hutao Bot Oficial__](https://youtube.com/@hutaobotoficial)
 ------------------
 
 ## INICIAR POR HOSPEDAGEM 💎

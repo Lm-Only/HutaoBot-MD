@@ -8,7 +8,7 @@ cleanFilesTemp() {
 
 while :
 do
-  echo -e "    \033[1;33mHUTAO BOT V9.5.0 EDITION 💎 ^-^\n INICIANDO, AGUARDE UM MOMENTO...🍾\033[0m"
+  echo -e "    \033[1;33mHUTAO BOT V9.5.5 UPDATE 💎 ^-^\n INICIANDO, AGUARDE UM MOMENTO...🍾\033[0m"
   cleanFilesTemp
 
   case "$1" in

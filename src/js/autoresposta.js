@@ -14,7 +14,7 @@
  * • Não use isso para outros fims maliciosos.
  * • Qualquer duvida, me chame: 559284828701
  *
- * TUTORIAL: https://whatsapp.com/channel/0029ValLKgUAO7RCUU0dO03k/3020
+ * TUTORIAL: https://youtu.be/VjOEOy4mrUc
  */
  
 
