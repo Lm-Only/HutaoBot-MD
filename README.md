@@ -30,6 +30,8 @@
 > [!IMPORTANT]
 > **Para acessar o bot, é necessário adquirir o arquivo. Por apenas R$30,00 reais você recebe uma chave de acesso vitalício, que permite utilização ilimitada do bot. [__Fale Conosco__](https://wa.me//559284828701?text=Comprar%20acesso%20permanente%20da%20HutaoBot-MD!%20)**
 
+> **Ao Comprar o Bot de Instalar, você deve assitir o Tutorial de Como usar a [__API do Yuta__](yuta-apis.xyz/)**
+
 ## INICIALIZAÇÃO 🔮
 
  * [__Iniciar por Hospedagem__](https://github.com/Lm-Only/HutaoBot-MD?tab=readme-ov-file#iniciar-por-hospedagem-)
@@ -41,6 +43,7 @@
 
  * [__Tutorial de como instalar__](https://youtu.be/UEayN52fsco)
  * [__Tutorial de como atualizar__](https://youtu.be/7B5EkX5PFFk)
+ * [__Tutorial de como de Como usar a API do Yuta__](https://www.youtube.com/watch?v=RiWTirsWTeg)
  * [__Tutorial de como Editar o Auto Resposta__](https://youtu.be/VjOEOy4mrUc)
 > Veja mais em nosso canal do YouTube [__Hutao Bot Oficial__](https://youtube.com/@hutaobotoficial)
 ------------------
