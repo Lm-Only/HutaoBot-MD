@@ -18,17 +18,18 @@
   <a href="https://wa.me/559284828701?text=/ajuda">
     <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
   </a>
-  <a href="https://instagram.com/lm_only_">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+   <a href="https://yuta-apis.xyz>">
+    <img src="https://img.shields.io/badge/API-YUTA-111111?style=for-the-badge&logo=googlechrome&logoColor=white">
   </a>
   <a href="https://youtube.com/@hutaobotoficial">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
   </a>
+</a>
 </p>
 
 # ATENÇÃO!!
 > [!IMPORTANT]
-> **Para acessar o bot, é necessário adquirir o arquivo. Por apenas R$30,00 reais você recebe uma chave de acesso vitalício, que permite utilização ilimitada do bot. [__Fale Conosco__](https://wa.me//559284828701?text=Comprar%20acesso%20permanente%20da%20HutaoBot-MD!%20)**
+> **Para acessar o bot, é necessário adquirir o arquivo. Por apenas R$30,00 reais você recebe uma chave de acesso, que permite utilização ilimitada do bot. [__Fale Conosco__](https://wa.me//559284828701?text=Comprar%20acesso%20permanente%20da%20HutaoBot-MD!%20)**
 
 > **Ao Comprar o Bot de Instalar, você deve assitir o Tutorial de Como usar a [__API do Yuta__](yuta-apis.xyz/)**
 
@@ -50,11 +51,11 @@
 
 ## INICIAR POR HOSPEDAGEM 💎
 
-**Você precisa ter um login na sua hospedagem e um servidor criado**
+**Você precisa ter um login na sua Hospedagem e um Servidor Criado**
 
 ## Passos simples: ✨️
 
-> Dependendo da sua hospedagem, pode conter diferenças entre parâmetros, nomes e botões.
+> Dependendo da sua Hospedagem, pode conter Diferenças entre Parâmetros, Nomes e Botões.
 ------------------
 1 - PASSO: 💖
 > Baixe o arquivo ZIP do bot
@@ -80,7 +81,7 @@
 
 **Após instalar o apk, execute os seguintes comandos abaixo:**
 
-> Copie e cole apenas 1 comando por vez, e pressione enter ou pular linha no seu teclado.
+> Copie e cole apenas 1 comando por vez, e pressione ENTER ou Pular Linha no seu teclado.
 > Espere o comando acabar para iniciar outro.
 ------------------
 1 - COMANDO: 🌸
@@ -111,9 +112,7 @@ cd /sdcard && git clone https://github.com/Lm-Only/HutaoBot-MD
 cd /sdcard/HutaoBot-MD && npm start
 ````
 > Use-o para toda vez que for ligar o bot!
-> Muita atenção na hora de colar a key.
-> É necessário entrar em contato com o vendedor.
-> Fazer a compra e colar a key que ele enviar.
+> Muita atenção na hora de colar a key se for primeira inicialização.
 ------------------
 COMANDO ADICIONAL: 🌸
 ````bash
@@ -134,7 +133,7 @@ cd /sdcard/HutaoBot-MD && npm start up
 
 - **Update**: Canal onde será postado updates da HutaoBot-MD. ✨
 
-* [__Canal__](https://whatsapp.com/channel/0029VbBDYlKDuMRm551Z5e0s)
+* [__Canal__](https://whatsapp.com/channel/0029VbBvdevBKfhuvo5na32z)
 
 ## Sistemas mais avaliados 
 

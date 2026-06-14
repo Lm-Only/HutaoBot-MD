@@ -4,12 +4,10 @@
     "NickDono": "NICK_DONO_AQUI",
     "NomeDoBot": "𝑯𝒖𝒕𝒂𝒐𝑩𝒐𝒕-𝑴𝑫 ✿",
     "token": "TOKEN_YUTA",
-    "__comments__": {
-        "_COMO_SETAR_TOKEN_": {
-            "leia": "Para setar um token, é necessario que você veja o tutorial abaixo e logo em seguida acesse o site!!",
-            "tutorial": "https://www.youtube.com/watch?v=RiWTirsWTeg",
-            "site": "yuta-apis.xyz",
-            "final": "Cole seu token lá em 'token'"
-        }
+    "COMO_SETAR_TOKEN": {
+        "leia": "Para setar um token, é necessario que você veja o tutorial abaixo e logo em seguida acesse o site!!",
+        "tutorial": "https://www.youtube.com/watch?v=RiWTirsWTeg",
+        "site": "yuta-apis.xyz",
+        "final": "Cole seu token lá em 'token'"
     }
 }
